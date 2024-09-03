@@ -1,0 +1,27 @@
+YOUTUBE - > freeCodeCamp
+https://www.youtube.com/watch?v=0n809nd4Zu4
+
+1) background.js -> chrome tabs update yeh sab info rakhta
+background scripts are non-persistent service workers that are loaded 
+in response to browser events and unloaded upon code completion. 
+They cannot run code indefinitely like popup/options/sidebar pages and must be attached to an event
+
+
+2) contentScript.js -> woh webpage jo khula hai uska info rakhta and listens to background.js
+They run in the context of the web page and can alter the DOM and behavior of any page to add features into it.
+ Content scripts are scoped to the page where they are injected and are limited to the context of that page, 
+ so they cannot persist data across tabs and origins or surface data outside the page. 
+ They are essential for altering the DOM and behavior of certain webpages
+
+
+3) popup -> extension html aur usse interact karna using dom tree aur function lagana + chrome api use like chrome.storage
+The popup script is associated with the popup page of your extension, which is a UI page that
+ appears when the user clicks on the extension's icon. 
+ This script is responsible for handling UI-related code and interactions. 
+Popup pages are granted every feature requested in the manifest file and can display a custom UI hosted locally.
+
+
+  // sendMessage from background, popup //OnMessage on contentScript
+   aise communication hota hai
+
+
